@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nathan Badumisa — Développeur web et automatisation Excel à Kinshasa</title>
-<meta name="description" content="Développeur freelance à Kinshasa. Applications de gestion, sites web, SaaS et automatisation Excel, VBA et Google Sheets pour pharmacies, cliniques et PME. Disponible à distance.">
+<title>Nathan Badumisa — Développeur web freelance à Kinshasa</title>
+<meta name="description" content="Développeur web freelance à Kinshasa. Sites web, plateformes, applications de gestion et SaaS sur mesure avec React, Next.js et Python. Disponible à distance.">
 <link rel="canonical" href="https://nathan-dev-portfolio.vercel.app/">
 <meta name="theme-color" content="#F5F6F8" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#0E1424" media="(prefers-color-scheme: dark)">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="fr_FR">
-<meta property="og:title" content="Nathan Badumisa — Développeur web et automatisation Excel">
-<meta property="og:description" content="Applications de gestion, sites web, SaaS et automatisation Excel, VBA et Google Sheets. Freelance à Kinshasa, disponible à distance.">
+<meta property="og:title" content="Nathan Badumisa — Développeur web freelance">
+<meta property="og:description" content="Sites web, plateformes, applications de gestion et SaaS sur mesure. Freelance à Kinshasa, disponible à distance.">
 <meta property="og:url" content="https://nathan-dev-portfolio.vercel.app/">
 <meta property="og:image" content="https://nathan-dev-portfolio.vercel.app/images/og.png">
 <meta name="twitter:card" content="summary_large_image">
@@ -24,7 +24,7 @@
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Nathan Badumisa",
-  "jobTitle": "Développeur web et automatisation Office",
+  "jobTitle": "Développeur web freelance",
   "url": "https://nathan-dev-portfolio.vercel.app/",
   "image": "https://nathan-dev-portfolio.vercel.app/images/photo.jpg",
   "address": { "@type": "PostalAddress", "addressLocality": "Kinshasa", "addressCountry": "CD" },
@@ -140,6 +140,35 @@
   .btn-main:hover { filter: brightness(1.1); }
   .btn-line { background: transparent; color: var(--ink); border-color: var(--line); }
   .btn-line:hover { border-color: var(--ink); }
+
+
+  /* ---------- Hero : navigateur ---------- */
+  .hero-tech { margin-top: 14px; font-size: 15px; color: var(--ink-2); }
+  .browser {
+    background: var(--sheet); border: 1px solid var(--line); border-radius: 14px;
+    box-shadow: 0 18px 48px rgba(17,26,46,0.12); overflow: hidden;
+  }
+  .browser-bar { display: flex; align-items: center; gap: 14px; padding: 12px 16px; border-bottom: 1px solid var(--line); background: var(--paper); }
+  .lights { display: flex; gap: 6px; }
+  .lights i { width: 10px; height: 10px; border-radius: 50%; background: var(--line); display: block; }
+  .browser-title { font-size: 13.5px; color: var(--ink-2); font-weight: 500; }
+  .browser-view { aspect-ratio: 16 / 10; background: var(--paper); overflow: hidden; }
+  .browser-view img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: opacity .25s ease; }
+  .browser-view img.swap { opacity: 0; }
+  .browser-tabs { display: flex; gap: 8px; flex-wrap: wrap; padding: 14px 16px 4px; }
+  .tab {
+    font: inherit; font-size: 14.5px; font-weight: 500; cursor: pointer;
+    padding: 8px 14px; border-radius: 8px; border: 1px solid var(--line);
+    background: transparent; color: var(--ink-2);
+  }
+  .tab:hover { border-color: var(--ink); color: var(--ink); }
+  .tab[aria-pressed="true"] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+  .browser-note { padding: 8px 16px 16px; font-size: 14.5px; color: var(--ink-2); min-height: 3.4em; }
+
+  /* ---------- Démo FEFO dans Services ---------- */
+  .demo-block { margin-top: 24px; }
+  .demo-title { margin-top: 56px; }
+  .demo-block .sheet { margin-top: 28px; max-width: 560px; }
 
   /* ---------- Demo: stock FEFO ---------- */
   .sheet {
@@ -265,7 +294,7 @@
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .lot-row, .lot-row.hit td { animation: none; }
-    .shot-frame img { transition: none; }
+    .shot-frame img, .browser-view img { transition: none; }
     .shot:hover img { transform: none; }
   }
 </style>
@@ -302,15 +331,70 @@
   <section class="hero" id="top">
     <div class="wrap hero-grid">
       <div>
-        <h1>Je transforme vos fichiers Excel et vos tâches répétitives en outils qui travaillent seuls.</h1>
-        <p class="hero-sub">Je suis développeur freelance à Kinshasa. Je crée des applications de gestion, des sites web et des automatisations pour les pharmacies, les centres de santé et les petites entreprises.</p>
+        <h1>Je crée des sites et des applications web sur mesure pour votre activité.</h1>
+        <p class="hero-sub">Je suis développeur web freelance à Kinshasa. Plateformes en ligne, applications de gestion, SaaS et sites vitrines : rapides sur mobile, faciles à faire évoluer, livrés de la conception à la mise en ligne.</p>
         <div class="hero-actions">
           <a class="btn btn-main" href="#contact">Parler de votre projet</a>
           <a class="btn btn-line" href="#projets">Voir mes projets</a>
         </div>
+        <p class="hero-tech">Je travaille avec React, Next.js, Python, Supabase et Firebase.</p>
         <p class="hero-status"><span class="dot" aria-hidden="true"></span>Disponible pour de nouvelles missions, à distance</p>
       </div>
 
+      <div class="browser" id="browser">
+        <div class="browser-bar">
+          <span class="lights" aria-hidden="true"><i></i><i></i><i></i></span>
+          <span class="browser-title" id="browser-title">Nathan Trading Academy</span>
+        </div>
+        <div class="browser-view">
+          <img id="browser-img" src="images/project-nta.png" alt="Aperçu de la plateforme Nathan Trading Academy" width="1920" height="1080">
+        </div>
+        <div class="browser-tabs" role="group" aria-label="Choisir un projet à afficher">
+          <button type="button" class="tab" aria-pressed="true" data-img="images/project-nta.png" data-title="Nathan Trading Academy" data-note="Plateforme de cours vidéo avec certificats et espace d'administration.">Plateforme de cours</button>
+          <button type="button" class="tab" aria-pressed="false" data-img="images/project-signal.png" data-title="SIGNAL" data-note="Application web pour copier des trades entre comptes MetaTrader 5.">Application SaaS</button>
+          <button type="button" class="tab" aria-pressed="false" data-img="images/project-kindrive.png" data-title="KinDrive" data-note="Site web et identité d'une auto-école de Kinshasa.">Site vitrine</button>
+        </div>
+        <p class="browser-note" id="browser-note" aria-live="polite">Plateforme de cours vidéo avec certificats et espace d'administration.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="services">
+    <div class="wrap">
+      <h2 class="block-title">Ce que je construis pour vous</h2>
+      <p class="block-lead">Un seul interlocuteur, de l'analyse de votre besoin jusqu'à la mise en service.</p>
+      <div class="rows">
+        <div class="row">
+          <h3>Sites web et plateformes</h3>
+          <div>
+            <p>Site vitrine, plateforme de formation, boutique ou espace client : un site clair, rapide sur mobile et pensé pour être trouvé et utilisé facilement.</p>
+            <p>Exemples : Nathan Trading Academy et KinDrive.</p>
+          </div>
+        </div>
+        <div class="row">
+          <h3>Applications de gestion et SaaS</h3>
+          <div>
+            <p>Stock, caisse, facturation, suivi de production : une application web faite pour votre façon de travailler, qui reste utilisable même quand la connexion est instable.</p>
+            <p>Exemples : Pharmalink, LA BONTÉ et PIMBO.</p>
+          </div>
+        </div>
+        <div class="row">
+          <h3>Automatisation Excel, VBA et Google Sheets</h3>
+          <div>
+            <p>Vous gardez vos outils habituels, je supprime la saisie en double, les erreurs de formules et les rapports faits à la main.</p>
+          </div>
+        </div>
+        <div class="row">
+          <h3>Robots et outils de trading</h3>
+          <div>
+            <p>Robots MQL5 pour MetaTrader 5 et outils de copie de trades, issus de mon activité de trader.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="demo-block">
+        <h3 class="sub-title demo-title">Un exemple d'automatisation</h3>
+        <p class="block-lead">Dans le logiciel de la pharmacie LA BONTÉ, le stock suit la règle FEFO : le lot qui expire en premier sort en premier. Essayez par vous-même.</p>
       <div class="sheet" id="demo">
         <div class="sheet-head">
           <div class="sheet-title">Stock de paracétamol 500 mg</div>
@@ -336,39 +420,6 @@
         </form>
         <p class="sell-out" id="sell-out" role="status" aria-live="polite">Essayez avec 30 boîtes, puis avec 20.</p>
       </div>
-    </div>
-  </section>
-
-  <section class="block" id="services">
-    <div class="wrap">
-      <h2 class="block-title">Ce que je construis pour vous</h2>
-      <p class="block-lead">Un seul interlocuteur, de l'analyse de votre besoin jusqu'à la mise en service.</p>
-      <div class="rows">
-        <div class="row">
-          <h3>Applications de gestion et SaaS</h3>
-          <div>
-            <p>Stock, caisse, facturation, suivi de production : une application web faite pour votre façon de travailler, qui reste utilisable même quand la connexion est instable.</p>
-            <p>Je travaille avec React, Next.js, Python (FastAPI), Supabase et Firebase.</p>
-          </div>
-        </div>
-        <div class="row">
-          <h3>Automatisation Excel, VBA et Google Sheets</h3>
-          <div>
-            <p>Vous gardez vos outils habituels, je supprime la saisie en double, les erreurs de formules et les rapports faits à la main. Macros, formulaires, tableaux de bord, applications Apps Script.</p>
-          </div>
-        </div>
-        <div class="row">
-          <h3>Sites web</h3>
-          <div>
-            <p>Sites vitrines et plateformes de formation, rapides sur mobile et faciles à faire évoluer.</p>
-          </div>
-        </div>
-        <div class="row">
-          <h3>Robots et outils de trading</h3>
-          <div>
-            <p>Robots MQL5 pour MetaTrader 5 et outils de copie de trades, issus de mon activité de trader.</p>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -515,6 +566,25 @@
 
 <script>
 (function () {
+  /* ---- Navigateur du hero ---- */
+  var tabs = document.querySelectorAll('.tab');
+  var bImg = document.getElementById('browser-img');
+  var bTitle = document.getElementById('browser-title');
+  var bNote = document.getElementById('browser-note');
+  Array.prototype.forEach.call(tabs, function (t) {
+    t.addEventListener('click', function () {
+      Array.prototype.forEach.call(tabs, function (o) { o.setAttribute('aria-pressed', o === t ? 'true' : 'false'); });
+      bImg.classList.add('swap');
+      setTimeout(function () {
+        bImg.src = t.getAttribute('data-img');
+        bImg.alt = 'Aperçu du projet ' + t.getAttribute('data-title');
+        bTitle.textContent = t.getAttribute('data-title');
+        bNote.textContent = t.getAttribute('data-note');
+        bImg.classList.remove('swap');
+      }, 180);
+    });
+  });
+
   /* ---- Démonstration FEFO ---- */
   var rows = Array.prototype.slice.call(document.querySelectorAll('#lots .lot-row'));
   var out = document.getElementById('sell-out');
